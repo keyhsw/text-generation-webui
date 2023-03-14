@@ -200,6 +200,9 @@ suffix = '_pygmalion' if 'pygmalion' in shared.model_name.lower() else ''
 
 if shared.args.chat or shared.args.cai_chat:
     with gr.Blocks(css=ui.css+ui.chat_css, analytics_enabled=False, title=title) as shared.gradio['interface']:
+        gr.HTML('''<a href="https://github.com/oobabooga/text-generation-webui">Original github repo</a><br>
+<p>For faster inference without waiting in queue, you may duplicate the space. <a href="https://huggingface.co/spaces/antonovmaxim/text-generation-webui-space?duplicate=true"><img style="display: inline; margin-top: 0em; margin-bottom: 0em" src="https://bit.ly/3gLdBN6" alt="Duplicate Space" /></a></p>
+(👇 Scroll down to see the interface 👀)''')
         if shared.args.cai_chat:
             shared.gradio['display'] = gr.HTML(value=generate_chat_html(shared.history['visible'], shared.settings[f'name1{suffix}'], shared.settings[f'name2{suffix}'], shared.character))
         else:

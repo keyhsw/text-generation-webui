@@ -5,7 +5,7 @@ colorFrom: yellow
 colorTo: purple
 sdk: gradio
 sdk_version: 3.20.1
-app_file: server.py --cpu
+app_file: server.py
 pinned: false
 license: mit
 ---

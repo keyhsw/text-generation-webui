@@ -5,9 +5,6 @@ import re
 import sys
 import time
 import zipfile
-import os
-os.system('cd text-generation-webui && python download-model.py PygmalionAI/pygmalion-350m --branch main')
-# os.system('cd text-generation-webui && python download-model.py waifu-workshop/pygmalion-6b --branch original-sharded')
 from pathlib import Path
 
 import gradio as gr
